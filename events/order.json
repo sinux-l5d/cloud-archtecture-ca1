@@ -1,0 +1,25 @@
+{
+	"id": 58,
+	"store": 1,
+	"customer": "Bruce Willis",
+	"address": [
+		"Nakatomi Plaza",
+		"Century City",
+		"Los Angeles",
+		"California"
+	],
+	"items": [
+		{
+			"quantity": 1,
+			"code": "H1L",
+			"description": "Large Hat Brown",
+			"amount": 5000
+		},
+		{
+			"quantity": 1,
+			"code": "S9S",
+			"description": "Scarf Blue Short",
+			"amount": 8000
+		}
+	]
+}
