@@ -1,0 +1,25 @@
+{
+	"id": 49,
+	"store": 2,
+	"customer": "John McClane",
+	"address": [
+		"Suite 1",
+		"123 Main Street",
+		"Anytown, NY 12345",
+		"United States"
+	],
+	"items": [
+		{
+			"quantity": 1,
+			"code": "S9S",
+			"description": "Scarf Blue Short",
+			"amount": 8000
+		},
+		{
+			"quantity": 2,
+			"code": "S9L",
+			"description": "Scarf Blue Long",
+			"amount": 10000
+		}
+	]
+}

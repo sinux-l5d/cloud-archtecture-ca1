@@ -30,6 +30,8 @@ Resources:
         - CloudFormationDescribeStacksPolicy: {}
         - SQSSendMessagePolicy:
             QueueName: "store-*"
+        - DynamoDBWritePolicy:
+            TableName: !Ref TableItems
       Environment:
         Variables:
           STACK_NAME: !Ref AWS::StackName
@@ -54,10 +56,32 @@ Resources:
     Properties:
       QueueName: store-3
 
+  TableItems:
+    Type: AWS::DynamoDB::Table
+    Properties: 
+      AttributeDefinitions: 
+        - AttributeName: orderId
+          AttributeType: N
+        - AttributeName: itemCode
+          AttributeType: S
+      KeySchema: 
+        - AttributeName: orderId
+          KeyType: HASH
+        - AttributeName: itemCode
+          KeyType: RANGE
+      ProvisionedThroughput: 
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+
 Outputs:
-  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
-  # Find out more about other implicit resources you can reference within SAM
-  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+
+  StackArn:
+    Description: "Stack ARN"
+    Value: !Ref AWS::StackId
+  
+  StackName:
+    Description: "Stack Name"
+    Value: !Ref AWS::StackName
 
   RouterFunction:
     Description: "Hello World Lambda Function ARN"
@@ -79,3 +103,7 @@ Outputs:
       - store1: !Ref OutputStore1
         store2: !Ref OutputStore2
         store3: !Ref OutputStore3
+  
+  TableItems:
+    Description: "Table Items"
+    Value: !Ref TableItems
