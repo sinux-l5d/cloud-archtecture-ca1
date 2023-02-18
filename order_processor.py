@@ -57,17 +57,23 @@ def get_orders(queue_url):
                                    ReceiptHandle=receipt_handle)
 
 
-def format_order(order):
+def format_order(order, ack=False):
     """Format order information to be printed
     If order is None, return headers
     :param order: Order information or None
     :return: Formatted order information
     """
-    fmt = "| {:^20} | {:^20} | {:^20} | {:^20} | {:^20} |"
+    fmt = "| {:^20} | {:^20} | {:^60.60} | {:^20} | {:^20} | {:^20} |"
     if order == None:
-        return fmt.format("Order ID", "Customer", "Item Code", "Item Description", "Quantity")
+        return fmt.format("Order ID", "Customer", "Customer Address", "Item Code", "Item Description", "Quantity")
+
+    rows = []
     for item in order["items"]:
-        return fmt.format(order["id"], order["customer"], item["code"], item["description"], item["quantity"])
+        rows.append(fmt.format(order["id"], order["customer"], ", ".join(
+            order["address"]), item["code"], item["description"], item["quantity"]))
+        if ack:
+            rows[-1] += " (acknowledged)"
+    return "\n".join(rows)
 
 
 if __name__ == "__main__":
@@ -83,14 +89,16 @@ if __name__ == "__main__":
         LINE_CLEAR = '\x1b[2K'
 
         if store_nb in queues:
-            for order in get_orders(queues[store_nb]):
-                print(format_order(order))
+            for order in get_orders(queues[store_nb]):  # infinite loop
+                rows_wo_ack = format_order(order)
+                print(rows_wo_ack)
                 print(" Acknowledge by pressing enter", end="\r")
                 input()  # Wait
-                # delete ack prompt + add ack mark next to order
-                print(LINE_UP, end=LINE_CLEAR)
-                print(LINE_UP, end=LINE_CLEAR)
-                print(format_order(order) + " (acknowledged)")
+                print(LINE_UP, end=LINE_CLEAR)  # delete ack prompt
+                # delete order rows
+                for _ in rows_wo_ack.splitlines():
+                    print(LINE_UP, end=LINE_CLEAR)
+                print(format_order(order, True))
         else:
             print("No queue for store {}".format(store_nb))
 

@@ -51,6 +51,7 @@ def handler(event, context):
                     MessageBody=json.dumps({
                         "id": order['id'],
                         "customer": order['customer'],
+                        "address": order['address'],
                         "items": order['items'],
                     })
                 )
