@@ -57,7 +57,7 @@ Automatically:
 - Delete message in the store queue at the end
 - Use tests/integration/orders.json
 - NEED good internet connection
-Useful if you want to see everything is working without verifying yourself
+Useful if you want to check everything is working without verifying yourself
 
 EOF
 

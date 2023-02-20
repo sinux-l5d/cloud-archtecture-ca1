@@ -101,7 +101,7 @@ class TestRouter:
             res = {}
             while t < MAX_TRY and 'Messages' not in res:
                 res = sqs.receive_message(
-                    QueueUrl=queues_url["store_queues"][store], MaxNumberOfMessages=1, WaitTimeSeconds=1)
+                    QueueUrl=queues_url["store_queues"][store], MaxNumberOfMessages=1, WaitTimeSeconds=3)
                 t += 1
                 print(res)
 
