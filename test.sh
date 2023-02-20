@@ -20,7 +20,7 @@ manuel_test() {
         ORDER=$(jq ".[$i]" tests/integration/orders.json)
         echo "Order to be sent :"
         echo "=============================="
-        echo $ORDER
+        echo $ORDER | jq '.'
         echo "=============================="
         echo -n "Hit enter to send the order"
         read -r
