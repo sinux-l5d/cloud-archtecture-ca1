@@ -47,7 +47,7 @@ def get_orders(queue_url):
             # AttributeNames=["SentTimestamp"],
             MaxNumberOfMessages=1,
             # MessageAttributeNames=["All"],
-            WaitTimeSeconds=5,
+            WaitTimeSeconds=2,
         )
         if "Messages" in response:
             for message in response["Messages"]:
