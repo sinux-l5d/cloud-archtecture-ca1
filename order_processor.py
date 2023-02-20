@@ -38,6 +38,8 @@ def cf_output(key, stack):
 
 def get_orders(queue_url):
     """Generator to get messages from SQS queue. This is unsed in a for loop
+    This generator is for academic purpose only: during the time the order is yield,
+    it doesn't fetch the next value.
     :param queue_url: SQS queue URL
     """
     sqs = boto3.client("sqs")
