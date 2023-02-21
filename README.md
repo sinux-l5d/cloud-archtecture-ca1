@@ -27,10 +27,14 @@ See the diagram in `design.pdf`.
 
 The repos contains: 
 
-- order_roiter - Code for the application's Lambda function.
+- order_router - Code for the application's Lambda function.
 <!-- events - Invocation events that you can use to invoke the function.-->
 - tests - Integration tests for the application code. 
 - template.yaml - A template that defines the application's AWS resources.
+- setup.sh - Deploy the lambda
+- teardown.sh - Delete the stack and SAM bucket files
+- test.sh - Automatic and manual test. Manual send orders one by one
+- order_processor.sh - Script for a store to retrieve orders
 
 ## Lifestyle scripts
 
@@ -46,6 +50,14 @@ In `setup.sh`, if you choose the guided deployment, you will the asked the follo
 
 The automatic deployment is the config I've used.
 
+## Retrieve orders as store
+
+Use the `order_processor.py` to get the orders from the SQS queue.
+
+Usage:
+```bash
+./order_processor.py <STACK-NAME> <STORE-ID-NUMBER>
+```
 
 ## Tests
 
