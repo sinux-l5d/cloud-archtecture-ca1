@@ -1,5 +1,7 @@
 # Cloud Architecture CA1
 
+![demo](demo.gif)
+
 ## Reminder of instructions
 
 Write a cloud-native app using lambda to send an order to a perticular store.
