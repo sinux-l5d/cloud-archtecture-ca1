@@ -19,6 +19,7 @@ See the diagram in `design.pdf`.
 ## Requirements
 
 * [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-reference.html#serverless-sam-cli)
+* AWS CLI is configured on your computer (config and credentials files)
 * Python 3.9 or docker (for building)
 * Module for python 
   * boto3 (`order_processor.py` & `tests/integration`)
