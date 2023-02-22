@@ -49,7 +49,7 @@ echo "=============================="
 cat samconfig.toml
 echo "=============================="
 echo
-echo -n "Would you like to deploy with the default values (d) or go through the guided install? [D/g] "
+echo -n "Would you like to deploy with the (d)efault values or go through the (g)uided install? [d/g] "
 
 read -r deploy
 
