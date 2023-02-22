@@ -24,6 +24,7 @@ See the diagram in `design.pdf`.
   * boto3 (`order_processor.py` & `tests/integration`)
   * pytest (`tests/integration`)
 * Bash (setup, teardown and test scripts)
+* [jq](https://stedolan.github.io/jq/)
 
 ## Files
 
