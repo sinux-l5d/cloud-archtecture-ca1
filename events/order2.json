@@ -1,25 +1,20 @@
 {
-	"id": 49,
-	"store": 2,
-	"customer": "John McClane",
-	"address": [
-		"Suite 1",
-		"123 Main Street",
-		"Anytown, NY 12345",
-		"United States"
-	],
-	"items": [
+	"Records": [
 		{
-			"quantity": 1,
-			"code": "S9S",
-			"description": "Scarf Blue Short",
-			"amount": 8000
-		},
-		{
-			"quantity": 2,
-			"code": "S9L",
-			"description": "Scarf Blue Long",
-			"amount": 10000
+			"messageId": "0ecd9b12-5435-4d51-af6b-66b012943f87",
+			"receiptHandle": "AQEBs4Z0gXrhweFRUfV/Z5R8GeH1ElFxBGRgcUZfYfGvP9oUWnUUZWUAHTQloc5J4RRHtybTV0d2sjVvggysZYnCxqH8VNbajnbTPic0mGAh1uWIaAPOpoj3c6DZNotIQUr5eLF9UL9ENBKliYdoLVpvZzKaAwzXDkQLnf6sPsNFK418IERWmDXIoJxkE4FEkj4MSgyLuhzNRp8eP7Rl2z1OayyB8hwOUTjKriR/dJgKJweqZ9qoX+b8hDX78BsaCWXof2ec6lB9PHa4oF4CKxpkfCOVyTJ/qc4BHH4pP2z2HbjgNF0/9XhnqlbR3d5S5288iI4nG3++yQxwa8A/Nb8PfjPmvojWtx8Sa0LlUftVOZ5HoHud2A9vyWEgiXzHfX03",
+			"body": "{\n  \"id\": 23,\n  \"store\": 2,\n  \"customer\": \"Bob\",\n  \"address\": [\n    \"456 Oak St\",\n    \"Anycity\",\n    \"USA\"\n  ],\n  \"items\": [\n    {\n      \"quantity\": 3,\n      \"code\": \"B2C\",\n      \"description\": \"Product B\",\n      \"amount\": 500\n    }\n  ]\n}",
+			"attributes": {
+				"ApproximateReceiveCount": "1",
+				"SentTimestamp": "1677058948279",
+				"SenderId": "AIDAQ4ZLMMMRDQVNC2IRC",
+				"ApproximateFirstReceiveTimestamp": "1677058948283"
+			},
+			"messageAttributes": {},
+			"md5OfBody": "8c6cd28e2bfb5cff2f607921bb04ef19",
+			"eventSource": "aws:sqs",
+			"eventSourceARN": "arn:aws:sqs:eu-west-1:061831144226:input-queue",
+			"awsRegion": "eu-west-1"
 		}
 	]
 }

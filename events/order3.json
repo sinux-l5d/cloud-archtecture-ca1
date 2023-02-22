@@ -1,0 +1,20 @@
+{
+    "Records": [
+        {
+            "messageId": "3c2d2113-658d-4749-bf36-5e99964b04c3",
+            "receiptHandle": "AQEBJatWAwjl9Jjax3v5TvWJA1CiQ3gsq19SZXvXpvb/nibqVFXx96i1yssxyGonGezu7XGKGluge8nW+uDR2SkFwmrSBpSXruAesIXTUsQL+2HpNJOtVNE9PDPIizKD4ih9iaulp3xa1RAfSedJoRq+nRxp0+W01paHSttCNtpO70u0c0xPgLqs1LBTejvekceeBORD8SJu5QIDcLl5SWx0pDohNTjcWY2ie7nrdgfJIFrQc28FKdzMRK/F2Bw2N1Bjv78kw8pxOFbpAejR5SxlVqj+z2dBqbBocry/8LDGLAG5okG6gG5IS2LPj5mLBH7ay8EGA64M6clIUdrGScCR3Ro6da7Edp5gIjVKpl4dm4W1yHTZu8cAel4e2ufB89oC",
+            "body": "{\n  \"id\": 456,\n  \"store\": 1,\n  \"customer\": \"Eve\",\n  \"address\": [\n    \"654 Elm St\",\n    \"Anystate\",\n    \"USA\"\n  ],\n  \"items\": [\n    {\n      \"quantity\": 3,\n      \"code\": \"G7H\",\n      \"description\": \"Product G\",\n      \"amount\": 2500\n    }\n  ]\n}",
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "SentTimestamp": "1677059010054",
+                "SenderId": "AIDAQ4ZLMMMRDQVNC2IRC",
+                "ApproximateFirstReceiveTimestamp": "1677059010106"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "017c85c211cea34f8ae8e67111d0f711",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:eu-west-1:061831144226:input-queue",
+            "awsRegion": "eu-west-1"
+        }
+    ]
+}

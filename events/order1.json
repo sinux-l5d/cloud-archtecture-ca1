@@ -1,25 +1,20 @@
 {
-	"id": 58,
-	"store": 1,
-	"customer": "Bruce Willis",
-	"address": [
-		"Nakatomi Plaza",
-		"Century City",
-		"Los Angeles",
-		"California"
-	],
-	"items": [
+	"Records": [
 		{
-			"quantity": 1,
-			"code": "H1L",
-			"description": "Large Hat Brown",
-			"amount": 5000
-		},
-		{
-			"quantity": 1,
-			"code": "S9S",
-			"description": "Scarf Blue Short",
-			"amount": 8000
+			"messageId": "c5221fbc-905a-485e-8e92-fabab85eaa28",
+			"receiptHandle": "AQEB03MW0RZXhUHv6QMmvz6xy7vOqJaSbUwxb/S53i0XyVeADSZoGSE1OaJiQe/1QxgUvy7hUqhqtVT3H5/cxS2cMiUUaxaxIhN/lx3OKotXBEhgQVOK45yaZlCR3VZCnYpRLxrDLaoIkSnBlODlS75ES8OZL3+nc/pCj2ZU4fP3FfWPdDjEZEdgjpBszS8AN1Sl3bjM81aazok5gGdtLuUkTDDURN+8f1XJv2q91JQPxQEM37zQCBR4o8YwL8iIx28MLSSa7iNMuSqLAjoeRSP+Y62kmK7Y3AxM7IgByysAsc2i3bXYmCuB/iqcouXNVWBP9+F7LHKIWXF/4XDq311A9pEb8PzdTXUUnaatuuHx4ZQ9AjkUYof5cW3uJeB5OmZw",
+			"body": "{\n  \"id\": 543,\n  \"store\": 3,\n  \"customer\": \"Alice\",\n  \"address\": [\n    \"123 Main St\",\n    \"Anytown\",\n    \"USA\"\n  ],\n  \"items\": [\n    {\n      \"quantity\": 2,\n      \"code\": \"A1B\",\n      \"description\": \"Product A\",\n      \"amount\": 1000\n    }\n  ]\n}",
+			"attributes": {
+				"ApproximateReceiveCount": "1",
+				"SentTimestamp": "1677058626187",
+				"SenderId": "AIDAQ4ZLMMMRDQVNC2IRC",
+				"ApproximateFirstReceiveTimestamp": "1677058626192"
+			},
+			"messageAttributes": {},
+			"md5OfBody": "cb1923c93d4ce626ae9abee5886a6ef6",
+			"eventSource": "aws:sqs",
+			"eventSourceARN": "arn:aws:sqs:eu-west-1:061831144226:input-queue",
+			"awsRegion": "eu-west-1"
 		}
 	]
 }

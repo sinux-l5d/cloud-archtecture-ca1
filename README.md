@@ -31,7 +31,7 @@ See the diagram in `design.pdf`.
 The repos contains: 
 
 - order_router - Code for the application's Lambda function.
-<!-- events - Invocation events that you can use to invoke the function.-->
+- events - Invocation events that you can use to invoke the function.
 - tests - Integration tests for the application code. 
 - template.yaml - A template that defines the application's AWS resources.
 - setup.sh - Deploy the lambda
